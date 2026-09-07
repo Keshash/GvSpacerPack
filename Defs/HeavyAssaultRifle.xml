@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>GV_ChargeHeavyAssaultRifle</defName>
+		<label>charge heavy assault rifle</label>
+		<description>Charged-shot assault rifle outfitted with a highly durable frame and additional recoil reduction mechanisms.\n\nWhile a novice shooter will prefer the lighter, more popular charge rifle design, those who can handle its higher sway will find this rifle highly effective at landing long bursts without the need to deploy a bipod.\n\nThanks to heavy, durable construction, this weapon can be thrown into mud, then be used to cave in an insectoid skull and still function properly afterwards. Typically seen among the power armour brigades of planetary defense forces.</description>
+		<graphicData>
+			<texPath>Things/Weapons/GV_HeavyAssaultRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.05,1.05)</drawSize>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<weaponClasses>
+			<li>LongShots</li>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<generateCommonality>0.7</generateCommonality>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Mass>6.0</Mass>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+			<SightsEfficiency>1.10</SightsEfficiency>
+			<ShotSpread>0.07</ShotSpread>
+			<SwayFactor>1.50</SwayFactor>
+			<Bulk>8.00</Bulk>
+			<WorkToMake>49000</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<Plasteel>30</Plasteel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+			<Chemfuel>15</Chemfuel>
+		</costList>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>1.03</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_6x24mmCharged</defaultProjectile>
+				<warmupTime>1.0</warmupTime>
+				<range>55</range>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<burstShotCount>7</burstShotCount>
+				<soundCast>Shot_ChargeRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>35</magazineSize>
+				<reloadTime>4</reloadTime>
+				<ammoSet>AmmoSet_6x24mmCharged</ammoSet>
+			</li>
+			<li Class="CombatExtended.CompProperties_FireModes">
+				<aiUseBurstMode>TRUE</aiUseBurstMode>
+				<aiAimMode>AimedShot</aiAimMode>
+				<aimedBurstShotCount>3</aimedBurstShotCount>
+			</li>
+		</comps>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<weaponTags>
+			<li>AdvancedGun</li>
+			<li>SpacerGun</li>
+		</weaponTags>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<recipeUsers Inherit="false">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>2.08</cooldownTime>
+				<chanceFactor>1.5</chanceFactor>
+				<armorPenetrationBlunt>5.07</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>3.52</cooldownTime>
+				<armorPenetrationBlunt>3</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>muzzle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>1.81</cooldownTime>
+				<armorPenetrationBlunt>5.07</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="CombatExtended.GunDrawExtension">
+				<DrawOffset>0.06,0.01</DrawOffset>
+			</li>
+			<li MayRequire="issaczhuang.muzzleflash" Class="MuzzleFlash.MuzzleFlashProps">
+				<def>MF_ChargedMuzzleFalsh</def>
+				<drawSize>(1,1)</drawSize>
+				<offsets>
+					<li>(0.60,0)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

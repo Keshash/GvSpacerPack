@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+		<ThingDef ParentName="BaseCrossbowBoltProjectile">
+		<defName>GV_Projectile_CrossbowBolt_Plasteel</defName>
+		<label>crossbow bolt (plasteel)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Arrows/Arrow_Plasteel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>85</speed>
+			<damageAmountBase>19</damageAmountBase>
+			<armorPenetrationBlunt>16.32</armorPenetrationBlunt>
+			<armorPenetrationSharp>13.5</armorPenetrationSharp>
+			<preExplosionSpawnChance>0</preExplosionSpawnChance>
+			<!-- <preExplosionSpawnThingDef>Ammo_CrossbowBolt_Plasteel</preExplosionSpawnThingDef> -->
+			<secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>4</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+		<modExtensions>
+			<li Class="ProjectileImpactFX.EffectProjectileExtension">
+				<AutoAssign>true</AutoAssign>
+				<CreateTerrainEffects>true</CreateTerrainEffects>
+				<StuckProjectileFleckDef>Fleck_CELandedArrow_Plasteel</StuckProjectileFleckDef>
+				<StuckProjectileFleckSize>0.55</StuckProjectileFleckSize>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseCrossbowBoltProjectile">
+		<defName>GV_Projectile_CrossbowBolt_Venom</defName>
+		<label>crossbow bolt (venom)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Arrows/Arrow_Venom</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>85</speed>
+			<damageDef>ArrowVenom</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationBlunt>16.5</armorPenetrationBlunt>
+			<armorPenetrationSharp>12.5</armorPenetrationSharp>
+		</projectile>
+		<modExtensions>
+			<li Class="ProjectileImpactFX.EffectProjectileExtension">
+				<AutoAssign>false</AutoAssign>
+				<CreateTerrainEffects>true</CreateTerrainEffects>
+				<StuckProjectileFleckDef>Fleck_CELandedArrow_Venom</StuckProjectileFleckDef>
+				<StuckProjectileFleckSize>0.55</StuckProjectileFleckSize>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseCrossbowBoltProjectile">
+		<defName>GV_Projectile_CrossbowBolt_Flame</defName>
+		<label>crossbow bolt (flame)</label>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Arrows/Arrow_Flame</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>85</speed>
+			<explosionRadius>0.2</explosionRadius>
+			<damageDef>ArrowFire</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.16</preExplosionSpawnChance>
+			<targetParams>
+        		<canTargetLocations>true</canTargetLocations>
+      		</targetParams>
+		</projectile>
+		<modExtensions>
+			<li Class="ProjectileImpactFX.EffectProjectileExtension">
+				<AutoAssign>false</AutoAssign>
+				<CreateTerrainEffects>true</CreateTerrainEffects>
+				<StuckProjectileFleckDef>Fleck_CELandedArrow_Flame</StuckProjectileFleckDef>
+				<StuckProjectileFleckSize>0.75</StuckProjectileFleckSize>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseWeaponNeolithic">
+		<defName>GV_ChargeCrossbow</defName>
+		<label>charge crossbow</label>
+		<description>A spacer-age reiteration of the medieval crossbow design. Launches plasteel bolts at high velocity, charging them with unstable energy in the process. Magazine-fed and semi-automatic.\n\nWhile only the bolts of pure plasteel are receptive to being charged, it can also launch specialised bolts. Typically, the bolts launched explode into splinters upon impact, making it impossible to reuse ammunition.\n\nPopular among big-game hunters.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Weapons/GV_AssaultCrossbow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<weaponClasses Inherit="False">
+			<li>LongShots</li>
+			<li>RangedLight</li>
+		</weaponClasses>
+		<generateCommonality>0.2</generateCommonality>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<Mass>3.2</Mass>
+			<Bulk>6</Bulk>
+			<SwayFactor>1.0</SwayFactor>
+			<ShotSpread>0.4</ShotSpread>
+			<RangedWeapon_Cooldown>0.57</RangedWeapon_Cooldown>
+			<SightsEfficiency>1.10</SightsEfficiency>
+		</statBases>
+		<costList>
+			<Steel>20</Steel>
+			<WoodLog>40</WoodLog>
+		</costList>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>GV_Projectile_CrossbowBolt_Plasteel</defaultProjectile>
+				<warmupTime>1.0</warmupTime>
+				<range>45</range>
+				<soundCast>Shot_CE_Crossbow</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+			</li>
+		</verbs>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<weaponTags Inherit="False">
+			<li>SniperRifle</li>
+			<li>AdvancedGun</li>
+			<li>SpacerGun</li>
+			<li>CE_AI_SR</li>
+		</weaponTags>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>16</magazineSize>
+				<AmmoGenPerMagOverride>3</AmmoGenPerMagOverride>
+				<reloadTime>4</reloadTime>
+				<ammoSet>AmmoSet_CrossbowBolt_Charged</ammoSet>
+			</li>
+			<li Class="CombatExtended.CompProperties_FireModes">
+				<aiAimMode>AimedShot</aiAimMode>
+			</li>
+		</comps>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<recipeUsers Inherit="false">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>9</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>1.6</cooldownTime>
+				<armorPenetrationBlunt>0.65</armorPenetrationBlunt>
+			</li>
+		</tools>
+	</ThingDef>
+
+
+</Defs>

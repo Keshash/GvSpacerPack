@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+
+	
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>GV_Gun_ChargeRevolver</defName>
+		<label>charge magnum revolver</label>
+		<description>Charged-shot revolver with a high-power round. Despite using a full-power rifle caliber, its short barrel and insufficient charge capacitors cannot utilize the full potential of the rounds it uses.\n\nProduct of a failed encumbrance reduction project that aimed to give glitterworld machinegunners a sidearm in the same caliber as their main weapons. Rarely used by military forces due to its wastefulness, but still sought after by authoritarian figures for imposing appearances and high stopping power.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Weapons/GV_ChargeWalker</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<weaponClasses>
+			<li>RangedLight</li>
+			<li>ShortShots</li>
+		</weaponClasses>
+		<generateCommonality>0.4</generateCommonality>
+		<statBases>
+			<WorkToMake>16500</WorkToMake>
+			<Mass>1.9</Mass>
+			<Bulk>2.4</Bulk>
+			<ShotSpread>0.15</ShotSpread>
+			<SwayFactor>1.21</SwayFactor>
+			<SightsEfficiency>0.8</SightsEfficiency>
+			<RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>20</Steel>
+			<Plasteel>20</Plasteel>
+			<Chemfuel>5</Chemfuel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>2.73</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_6x24mmCharged</defaultProjectile>
+				<warmupTime>0.6</warmupTime>
+				<range>20</range>
+				<soundCast>Shot_ChargeRifle</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>6</magazineSize>
+				<reloadTime>0.5</reloadTime>
+				<reloadOneAtATime>true</reloadOneAtATime>
+				<ammoSet>GV_AmmoSet_8x35mmChargedWalker</ammoSet>
+				<AmmoGenPerMagOverride>2</AmmoGenPerMagOverride>
+			</li>
+			<li Class="CombatExtended.CompProperties_FireModes">
+				<aiAimMode>Snapshot</aiAimMode>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>AdvancedGun</li>
+			<li>CE_Sidearm</li>
+			<li>CE_SpacerSidearm</li>
+			<li>CE_OneHandedWeapon</li>
+			<li>CE_AI_BROOM</li>
+		</weaponTags>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<recipeUsers Inherit="false">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>1.54</cooldownTime>
+				<chanceFactor>1.5</chanceFactor>
+				<armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>muzzle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>1.54</cooldownTime>
+				<armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="CombatExtended.GunDrawExtension">
+				<DrawOffset>0.15,0.0</DrawOffset>
+				<DrawSize>0.8,0.8</DrawSize>
+			</li>
+			<li MayRequire="issaczhuang.muzzleflash" Class="MuzzleFlash.MuzzleFlashProps">
+				<def>MF_ChargedMuzzleFalsh</def>
+				<drawSize>(1.0,1.0)</drawSize>
+				<offsets>
+					<li>(0.5,0)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+
+</Defs>

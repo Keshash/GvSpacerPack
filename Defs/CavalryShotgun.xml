@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>GV_ChargeCavalryShotgun</defName>
+		<label>charge cavalry shotgun</label>
+		<description>Double-barreled charged-shot shotgun with a mono-molecular axehead. Its main advantage lies in low recoil and the possibility of one-handed usage, both ranged and in melee.\n\nAn unconventional weapon, often employed by gliderbike riders. Although some prefer to dismount before firing, pirate biker gangs tend to use it for caracole-like drive-by shootings.\n\nIts top-heavy design makes it very difficult to aim shots precisely. The heavy crystal-metallic axehead can easily cut through both steel and flesh alike, but struggles to control the opponent's blade during parries.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Weapons/GV_CavalryShotgun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.0,1.0)</drawSize>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<meleeHitSound MayRequire="ludeon.rimworld.royalty">MeleeHit_MonoSword</meleeHitSound>
+		<weaponClasses>
+			<li>ShortShots</li>
+			<li>RangedLight</li>
+		</weaponClasses>
+		<generateCommonality>0.5</generateCommonality>
+		<statBases>
+			<WorkToMake>38000</WorkToMake>
+			<Mass>4.0</Mass>
+			<Bulk>3.25</Bulk>
+			<ShotSpread>0.28</ShotSpread>
+			<SwayFactor>2.25</SwayFactor>
+			<SightsEfficiency>0.7</SightsEfficiency>
+			<RangedWeapon_Cooldown>0.59</RangedWeapon_Cooldown>
+			<MeleeCounterParryBonus>0.2</MeleeCounterParryBonus>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<Plasteel>25</Plasteel>
+			<MeleeWeapon_MonoSword>1</MeleeWeapon_MonoSword>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<equippedStatOffsets>
+			<MeleeCritChance>0.13</MeleeCritChance>
+			<MeleeParryChance>0.2</MeleeParryChance>
+			<MeleeDodgeChance>0.20</MeleeDodgeChance>
+			<ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>1.2</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_12GaugeCharged</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<range>16</range>
+				<soundCast>Shot_ChargeRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<aimingLineMote>GV_Mote_LaserPointer_LineAim</aimingLineMote>
+				<aimingLineMoteFixedLength>2</aimingLineMoteFixedLength>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>2</magazineSize>
+				<reloadOneAtATime>true</reloadOneAtATime>
+				<reloadTime>1.05</reloadTime>
+				<ammoSet>AmmoSet_12GaugeCharged</ammoSet>
+				<AmmoGenPerMagOverride>5</AmmoGenPerMagOverride>
+			</li>
+			<li Class="CombatExtended.CompProperties_FireModes">
+				<aiAimMode>Snapshot</aiAimMode>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>AdvancedGun</li>
+			<li>SpacerGun</li>
+			<li>CE_AI_BROOM</li>
+			<li>CE_OneHandedWeapon</li>
+			<li>NoSwitch</li>
+		</weaponTags>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<recipeUsers Inherit="false">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>9</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.55</cooldownTime>
+				<chanceFactor>1.5</chanceFactor>
+				<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>edge</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>25</power>
+				<cooldownTime>2.47</cooldownTime>
+				<armorPenetrationBlunt>6.69</armorPenetrationBlunt>
+				<armorPenetrationSharp>16.57</armorPenetrationSharp>
+				<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="CombatExtended.GunDrawExtension">
+				<DrawOffset>0.06,0</DrawOffset>
+				<!-- <muzzleJumpModifier>0.1</muzzleJumpModifier> -->
+			</li>
+			<li MayRequire="issaczhuang.muzzleflash" Class="MuzzleFlash.MuzzleFlashProps">
+				<def>MF_ChargedMuzzleFalsh</def>
+				<offsets>
+					<li>(0.56,0)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

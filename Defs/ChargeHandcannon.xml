@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>GV_Gun_ChargeGrenadePistol</defName>
+		<label>charge grenade pistol</label>
+		<description>Compact spacer age break-action launcher. Affectionately referred to as "hand cannon", it can launch explosive shells over short distances or fire high-caliber rounds with a special adapter.\n\nWhile it can use anti-materiel caliber rounds, the pressures involved tend to warp the barrel or make it fly off the frame after prolonged use. Sticking to launching low-velocity shells is recommended.\n\nHigh weight and bulky design make it difficult to aim precisely, but it's a great tool for leaving with a bang when things go south.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Weapons/GV_GrenadePistol</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(0.8,0.8)</drawSize>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<weaponClasses>
+			<li>RangedLight</li>
+			<li>ShortShots</li>
+		</weaponClasses>
+		<generateCommonality>0.25</generateCommonality>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<Mass>1.8</Mass>
+			<Bulk>3.8</Bulk>
+			<ShotSpread>0.15</ShotSpread>
+			<SwayFactor>1.87</SwayFactor>
+			<SightsEfficiency>0.7</SightsEfficiency>
+			<RangedWeapon_Cooldown>0.87</RangedWeapon_Cooldown>
+			<MaxHitPoints>100</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Steel>30</Steel>
+			<Plasteel>20</Plasteel>
+			<Chemfuel>5</Chemfuel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>2.13</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_30x64mmFuel_Incendiary</defaultProjectile>
+				<warmupTime>0.6</warmupTime>
+				<range>12</range>
+				<soundCast>Shot_IncendiaryLauncher</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>8</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>1</magazineSize>
+				<reloadTime>1.6</reloadTime>
+				<ammoSet>AmmoSet_30x64mmFuel</ammoSet>
+				<AmmoGenPerMagOverride>2</AmmoGenPerMagOverride>
+			</li>
+			<li Class="CombatExtended.CompProperties_FireModes">
+				<aiAimMode>Snapshot</aiAimMode>
+			</li>
+			<li Class="CombatExtended.CompProperties_UnderBarrel">
+				<propsUnderBarrel>
+					<magazineSize>1</magazineSize>
+					<reloadTime>1.6</reloadTime>
+					<ammoSet>GV_AmmoSet_12x72mmChargedSB</ammoSet>
+				</propsUnderBarrel>
+				<verbPropsUnderBarrel>
+					<recoilAmount>6.33</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_8x35mmCharged_Overpressure</defaultProjectile>
+					<warmupTime>0.6</warmupTime>
+					<range>12</range>
+					<soundCast>Shot_ChargeRifle</soundCast>
+					<soundCastTail>GunTail_Light</soundCastTail>
+					<muzzleFlashScale>12</muzzleFlashScale>
+				</verbPropsUnderBarrel>
+				<propsFireModesUnderBarrel>
+					<aiUseBurstMode>FALSE</aiUseBurstMode>
+					<aiAimMode>AimedShot</aiAimMode>
+					<aimedBurstShotCount>1</aimedBurstShotCount>
+				</propsFireModesUnderBarrel>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>AdvancedGun</li>
+			<li>CE_Sidearm</li>
+			<li>CE_SpacerSidearm</li>
+			<li>CE_OneHandedWeapon</li>
+			<li>CE_AI_BROOM</li>
+			<li>CE_AI_AOE</li>
+		</weaponTags>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<recipeMaker>
+			<researchPrerequisite Inherit="false">
+			</researchPrerequisite>
+			<researchPrerequisites Inherit="false">
+				<li>ChargedShot</li>
+				<li>CE_AdvancedLaunchers</li>
+			</researchPrerequisites>
+			<recipeUsers Inherit="false">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>1.54</cooldownTime>
+				<chanceFactor>1.5</chanceFactor>
+				<armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>muzzle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>1.54</cooldownTime>
+				<armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="CombatExtended.GunDrawExtension">
+				<DrawOffset>0.15,0.0</DrawOffset>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+
+</Defs>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<CombatExtended.BipodCategoryDef>
+		<defName>GV_tripodAutocannon</defName>
+		<label>Heavy tripod</label>
+		<bipod_id>GV_Tripod_Autocannon</bipod_id>
+		<ad_Range>5</ad_Range>
+		<setuptime>650</setuptime>
+		<recoil_mult_setup>1</recoil_mult_setup>
+		<recoil_mult_NOT_setup>2.1</recoil_mult_NOT_setup>
+		<warmup_mult_setup>1</warmup_mult_setup>
+		<warmup_mult_NOT_setup>2.5</warmup_mult_NOT_setup>
+		<logColor>(0, 255, 0)</logColor>
+		<swayMult>1</swayMult>
+		<swayPenalty>2.6</swayPenalty>
+		<autosetMode>AimedShot</autosetMode>
+		<useAutoSetMode>false</useAutoSetMode>
+	</CombatExtended.BipodCategoryDef>
+
+	<ThingDef ParentName="BaseMakeableGun">
+		<defName>GV_ChargeAutocannon</defName>
+		<label>charge twin autocannon</label>
+		<description>Double-barreled charged-particle autocannon, mounted on a heavy tripod. Fires in salvos of two.\n\nHighly effective against crowds of armored infantry or light vehicles, but is imprecise and takes a long time to set up. Usually requires teams of two or an exoskeleton system to be able to carry both the weapon and ammo for it.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Weapons/GV_ChargeTripodAutocannon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.3,1.3)</drawSize>
+		</graphicData>
+		<soundInteract>Interact_ChargeLance</soundInteract>
+		<generateCommonality>0.15</generateCommonality>
+		<weaponClasses>
+			<li>LongShots</li>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>WeaponRanged</li>
+		</tradeTags>
+		<statBases>
+			<WorkToMake>94500</WorkToMake>
+			<SightsEfficiency>1.1</SightsEfficiency>
+			<ShotSpread>1.26</ShotSpread>
+			<SwayFactor>1.42</SwayFactor>
+			<Bulk>20.8</Bulk>
+			<Mass>33.0</Mass>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>185</Steel>
+			<Plasteel>95</Plasteel>
+			<Chemfuel>45</Chemfuel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<weaponTags Inherit="False">
+			<li>GV_Tripod_Autocannon</li>
+			<li>AdvancedGun</li>
+			<li>SpacerGun</li>
+			<li>CE_MachineGun</li>
+			<li>CE_AI_LMG</li>
+		</weaponTags>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>1.08</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_12x72mmChargedTwin</defaultProjectile>
+				<ammoConsumedPerShotCount>2</ammoConsumedPerShotCount>
+				<warmupTime>1.2</warmupTime>
+				<burstShotCount>6</burstShotCount>
+				<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+				<range>75</range>
+				<soundCast>GV_ChargeCannon_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>14</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>50</magazineSize>
+				<AmmoGenPerMagOverride>1</AmmoGenPerMagOverride>
+				<reloadTime>4.9</reloadTime>
+				<ammoSet>AmmoSet_12x72mmChargedTwin</ammoSet>
+			</li>
+			<li Class="CombatExtended.CompProperties_FireModes">
+				<aiAimMode>AimedShot</aiAimMode>
+				<aimedBurstShotCount>3</aimedBurstShotCount>
+			</li>
+		</comps>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<recipeUsers Inherit="false">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.55</cooldownTime>
+				<chanceFactor>1.5</chanceFactor>
+				<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2.02</cooldownTime>
+				<armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>muzzle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.55</cooldownTime>
+				<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="CombatExtended.GunDrawExtension">
+				<DrawOffset>0.55,-0.25</DrawOffset>
+				<DrawSize>(2.0,2.0)</DrawSize>
+				<muzzleJumpModifier>0.0</muzzleJumpModifier>
+			</li>
+			<li MayRequire="issaczhuang.muzzleflash" Class="MuzzleFlash.MuzzleFlashProps">
+				<def>MF_ChargedMuzzleFalsh</def>
+				<drawSize>(3.5,1.5)</drawSize>
+				<offsets>
+					<li>(1.45,-0.25)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

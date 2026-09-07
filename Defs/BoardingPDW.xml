@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>GV_ChargeBoardingPDW</defName>
+		<label>charge boarding PDW</label>
+		<description>A rugged, upcalibered close-quarters rifle made for breaching spaceships. Extremely lethal up close, but struggles at any range other than point-blank. Equipped with a small drilling device to create loopholes in walls and dismantle doors.\n\nWhen orbital piracy became a common thing, a question arose: how can a very small crew take over a very narrow corridor filled with armed defenders without destroying the whole ship with explosives? One of the answers was an oversized SMG spraying more bullets than the defenders could spray back. Typically hip-fired.</description>
+		<graphicData>
+			<texPath>Things/Weapons/GV_BoardingPDW</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<weaponClasses>
+			<li>ShortShots</li>
+			<li>RangedLight</li>
+		</weaponClasses>
+		<generateCommonality>0.7</generateCommonality>
+		<statBases>
+			<WorkToMake>46000</WorkToMake>
+			<SightsEfficiency>0.9</SightsEfficiency>
+			<ShotSpread>1.22</ShotSpread>
+			<SwayFactor>1.43</SwayFactor>
+			<Bulk>8.50</Bulk>
+			<Mass>3.20</Mass>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>40</Steel>
+			<Plasteel>25</Plasteel>
+			<Chemfuel>10</Chemfuel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>1.47</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_6x24mmCharged</defaultProjectile>
+				<warmupTime>0.65</warmupTime>
+				<range>25</range>
+				<burstShotCount>10</burstShotCount>
+				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+				<soundCast>GV_ChargeBattlerifle_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>8</muzzleFlashScale>
+				<stopBurstWithoutLos>false</stopBurstWithoutLos>
+				<interruptibleBurst>false</interruptibleBurst>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>60</magazineSize>
+				<reloadTime>4.9</reloadTime>
+				<ammoSet>AmmoSet_6x24mmCharged</ammoSet>
+			</li>
+			<li Class="CombatExtended.CompProperties_FireModes">
+				<aiUseBurstMode>TRUE</aiUseBurstMode>
+				<aiAimMode>Snapshot</aiAimMode>
+				<aimedBurstShotCount>4</aimedBurstShotCount>
+			</li>
+		</comps>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<weaponTags>
+			<li>AdvancedGun</li>
+			<li>SpacerGun</li>
+			<li>CE_AI_BROOM</li>
+		</weaponTags>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<recipeUsers Inherit="false">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>9</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.55</cooldownTime>
+				<chanceFactor>1.5</chanceFactor>
+				<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>breaching tool</label>
+				<capacities>
+					<li>Demolish</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>2.65</cooldownTime>
+				<armorPenetrationBlunt>3.375</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="CombatExtended.GunDrawExtension">
+				<DrawSize>1.05,1.05</DrawSize>
+			</li>
+			<li MayRequire="issaczhuang.muzzleflash" Class="MuzzleFlash.MuzzleFlashProps">
+				<def>MF_ChargedMuzzleFalsh</def>
+				<drawSize>(1.0,2.0)</drawSize>
+				<offsets>
+					<li>(0.36,0)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

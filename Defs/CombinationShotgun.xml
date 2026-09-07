@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>GV_ChargeCombinationShotgun</defName>
+		<label>charge combination shotgun</label>
+		<description>Long-barrelled charged-shot shotgun with a unique ammo-feeding mechanism and 2 separate magazine tubes, allowing the user to instantly switch between charged and ballistic rounds. Notable features include a low-magnification hunting scope and a suppressor, which removes muzzle flashes at night.\n\nPopular among space safari tourists and urbworld law enforcement for its unmatched versatility.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Weapons/GV_RangerShotgun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<weaponClasses>
+			<li>LongShots</li>
+		</weaponClasses>
+		<generateCommonality>0.7</generateCommonality>
+		<statBases>
+			<WorkToMake>33500</WorkToMake>
+			<Mass>3.0</Mass>
+			<Bulk>8.50</Bulk>
+			<ShotSpread>0.3</ShotSpread>
+			<SwayFactor>1.33</SwayFactor>
+			<!-- 2x scope -->
+			<SightsEfficiency>2.18</SightsEfficiency>
+			<RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
+			<NightVisionEfficiency_Weapon>0.2</NightVisionEfficiency_Weapon>
+		</statBases>
+		<costList>
+			<Steel>45</Steel>
+			<Plasteel>25</Plasteel>
+			<Chemfuel>10</Chemfuel>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>3.29</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_12GaugeCharged</defaultProjectile>
+				<warmupTime>1.1</warmupTime>
+				<range>55</range>
+				<soundCast>Shot_GV_SuppressedChargeHeavy</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>6</magazineSize>
+				<reloadOneAtATime>true</reloadOneAtATime>
+				<reloadTime>0.65</reloadTime>
+				<ammoSet>AmmoSet_12GaugeCharged</ammoSet>
+				<AmmoGenPerMagOverride>2</AmmoGenPerMagOverride>
+			</li>
+			<li Class="CombatExtended.CompProperties_FireModes">
+				<aiAimMode>AimedShot</aiAimMode>
+			</li>
+			<li Class="CombatExtended.CompProperties_UnderBarrel">
+				<propsUnderBarrel>
+					<magazineSize>6</magazineSize>
+					<reloadTime>0.95</reloadTime>
+					<ammoSet>AmmoSet_12Gauge</ammoSet>
+					<reloadOneAtATime>true</reloadOneAtATime>
+				</propsUnderBarrel>
+				<verbPropsUnderBarrel>
+					<recoilAmount>2.98</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+					<warmupTime>0.75</warmupTime>
+					<range>55</range>
+					<soundCast>Shot_Shotgun</soundCast>
+					<soundCastTail>GunTail_Light</soundCastTail>
+					<muzzleFlashScale>0</muzzleFlashScale>
+				</verbPropsUnderBarrel>
+				<propsFireModesUnderBarrel>
+					<aiUseBurstMode>FALSE</aiUseBurstMode>
+					<aiAimMode>AimedShot</aiAimMode>
+					<aimedBurstShotCount>1</aimedBurstShotCount>
+				</propsFireModesUnderBarrel>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>AdvancedGun</li>
+			<li>SpacerGun</li>
+			<li>CE_AI_BROOM</li>
+		</weaponTags>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<recipeUsers Inherit="false">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.55</cooldownTime>
+				<chanceFactor>1.5</chanceFactor>
+				<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2.02</cooldownTime>
+				<armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>muzzle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.55</cooldownTime>
+				<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="CombatExtended.GunDrawExtension">
+				<DrawOffset>0.32,-0.05</DrawOffset>
+				<DrawSize>1.6,1.6</DrawSize>
+			</li>
+			<li MayRequire="issaczhuang.muzzleflash" Class="MuzzleFlash.MuzzleFlashProps">
+				<def>MF_ChargedMuzzleFalsh</def>
+				<drawSize>(1.5,0.5)</drawSize>
+				<offsets>
+					<li>(1.26,0)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

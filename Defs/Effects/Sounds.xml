@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<SoundDef>
+		<defName>Shot_GV_SuppressedCharge</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Weapon/ChargeRifleSuppressed_Fire</clipFolderPath>
+					</li>
+				</grains>
+				<pitchRange>1~1.091765</pitchRange>
+				<volumeRange>45.2941~45.2941</volumeRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	
+	<SoundDef>
+		<defName>Shot_GV_SuppressedChargeHeavy</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Weapon/ChargeRifleSuppressed_Fire</clipFolderPath>
+					</li>
+				</grains>
+				<pitchRange>1~1.091765</pitchRange>
+				<volumeRange>94.70588~94.70588</volumeRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+			<li>
+				<grains>
+				<li Class="AudioGrain_Folder">
+					<clipFolderPath>Weapon/Shotgun/Rack</clipFolderPath>
+				</li>
+				</grains>      
+				<volumeRange>10.58823~10.58823</volumeRange>      
+				<pitchRange>0.9311765~1.137647</pitchRange>      
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>GV_ChargeBattlerifle_Fire</defName>  
+		<context>MapOnly</context>  
+		<maxSimultaneous>1</maxSimultaneous>  
+		<subSounds>
+		  <li>
+			<grains>
+			  <li Class="AudioGrain_Folder">
+				<clipFolderPath>Weapon/ChargeBattlerifle_Fire</clipFolderPath>
+			  </li>
+			</grains>      
+			<pitchRange>0.9082353~1.045882</pitchRange>      
+			<sustainLoop>False</sustainLoop>
+		  </li>
+		</subSounds>
+	  </SoundDef>
+
+	  	<SoundDef>
+		<defName>GV_ChargeCannon_Fire</defName>  
+		<context>MapOnly</context>  
+		<maxSimultaneous>1</maxSimultaneous>  
+		<subSounds>
+		  <li>
+			<grains>
+			  <li Class="AudioGrain_Folder">
+				<clipFolderPath>Weapon/ChargeCannon_Fire</clipFolderPath>
+			  </li>
+			</grains>      
+			<pitchRange>0.9082353~1.045882</pitchRange>      
+			<sustainLoop>False</sustainLoop>
+		  </li>
+		</subSounds>
+	  </SoundDef>
+
+
+</Defs>

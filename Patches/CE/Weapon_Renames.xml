@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_ChargeAutocannon"]/label</xpath>
+			<value>
+				<label>DASH charge twin autocannon</label>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_ChargeCrossbow"]/label</xpath>
+			<value>
+				<label>XB-1 charge crossbow</label>
+			</value>
+		</match>
+	</Operation>
+		<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_ChargeBeltfedShotgun"]/label</xpath>
+			<value>
+				<label>BS-12 charge beltfed shotgun</label>
+			</value>
+		</match>
+	</Operation>
+		<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_ChargeBoardingPDW"]/label</xpath>
+			<value>
+				<label>LR-D charge boarding gun</label>
+			</value>
+		</match>
+	</Operation>
+		<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_ChargeCavalryShotgun"]/label</xpath>
+			<value>
+				<label>CQS-12 charge cavalry shotgun</label>
+			</value>
+		</match>
+	</Operation>
+		<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_Gun_ChargeGrenadePistol"]/label</xpath>
+			<value>
+				<label>GP-C charge grenade pistol</label>
+			</value>
+		</match>
+	</Operation>
+		<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_Gun_ChargeRevolver"]/label</xpath>
+			<value>
+				<label>MP-6 charge magnum revolver</label>
+			</value>
+		</match>
+	</Operation>
+		<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_ChargeCombinationShotgun"]/label</xpath>
+			<value>
+				<label>RS-12 charge combination shotgun</label>
+			</value>
+		</match>
+	</Operation>
+		<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_ChargeCommandoRifle"]/label</xpath>
+			<value>
+				<label>SOFR charge commando rifle</label>
+			</value>
+		</match>
+	</Operation>
+
+		<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_ChargeMarksmanRifle"]/label</xpath>
+			<value>
+				<label>SR-14 charge marksman rifle</label>
+			</value>
+		</match>
+	</Operation>
+		<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_ChargeFoldingCarbine"]/label</xpath>
+			<value>
+				<label>ExC-F charge folding carbine</label>
+			</value>
+		</match>
+	</Operation>
+		<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_ChargeHeavyAssaultRifle"]/label</xpath>
+			<value>
+				<label>HAR-6 charge heavy assault rifle</label>
+			</value>
+		</match>
+	</Operation>
+		<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_ChargeMicrogun"]/label</xpath>
+			<value>
+				<label>SWL charge Microgun</label>
+			</value>
+		</match>
+	</Operation>
+			<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_ChargePipeGun"]/label</xpath>
+			<value>
+				<label>Mk1 charge Pipe Gun</label>
+			</value>
+		</match>
+	</Operation>
+		<Operation Class="CombatExtended.PatchOperationSettingsConditional">
+		<settingName>realWeaponNames</settingName>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GV_Gun_ChargePrecisionRifle"]/label</xpath>
+			<value>
+				<label>RPC-8 charge precision Rifle</label>
+			</value>
+		</match>
+	</Operation>
+
+
+</Patch>

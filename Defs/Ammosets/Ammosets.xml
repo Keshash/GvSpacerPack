@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- crossbow -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_CrossbowBolt_Charged</defName>
+		<label>crossbow bolts</label>
+		<ammoTypes>
+			<Ammo_CrossbowBolt_Plasteel>GV_Projectile_CrossbowBolt_Plasteel</Ammo_CrossbowBolt_Plasteel>
+			<Ammo_CrossbowBolt_Venom>GV_Projectile_CrossbowBolt_Venom</Ammo_CrossbowBolt_Venom>
+			<Ammo_CrossbowBolt_Flame>GV_Projectile_CrossbowBolt_Flame</Ammo_CrossbowBolt_Flame>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- handcannon -->
+
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>GV_AmmoSet_ChargedHeavySB</defName>
+		<label>heavy charged (Overpressure)</label>
+		<ammoTypes>
+			<Ammo_HeavyCharged>Bullet_8x35mmCharged_Overpressure</Ammo_HeavyCharged>
+			<Ammo_HeavyCharged_AP>Bullet_8x35mmCharged_AP_Overpressure</Ammo_HeavyCharged_AP>
+			<Ammo_HeavyCharged_Ion>Bullet_8x35mmCharged_Ion_Overpressure</Ammo_HeavyCharged_Ion>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<CombatExtended.AmmoSetDef>
+		<defName>GV_AmmoSet_12x72mmChargedSB</defName>
+		<label>12x72mm Charged (Overpressure)</label>
+		<ammoTypes>
+			<Ammo_12x72mmCharged>Bullet_8x35mmCharged_Overpressure</Ammo_12x72mmCharged>
+			<Ammo_12x72mmCharged_AP>Bullet_8x35mmCharged_AP_Overpressure</Ammo_12x72mmCharged_AP>
+			<Ammo_12x72mmCharged_Ion>Bullet_8x35mmCharged_Ion_Overpressure</Ammo_12x72mmCharged_Ion>
+		</ammoTypes>
+		<similarTo>GV_AmmoSet_ChargedHeavySB</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<ThingDef ParentName="Bullet_8x35mmCharged">
+		<defName>Bullet_8x35mmCharged_Overpressure</defName>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<weaponDeteriorationChance>0.02</weaponDeteriorationChance>
+			<!-- every 50 shots -->
+			 <weaponDeteriorationHP>0~20</weaponDeteriorationHP>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef  ParentName="Bullet_8x35mmCharged_AP">
+		<defName>Bullet_8x35mmCharged_AP_Overpressure</defName>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<weaponDeteriorationChance>0.02</weaponDeteriorationChance>
+			<!-- every 50 shots -->
+			 <weaponDeteriorationHP>0~20</weaponDeteriorationHP>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Bullet_8x35mmCharged_Ion">
+		<defName>Bullet_8x35mmCharged_Ion_Overpressure</defName>
+		<label>8x35mm Charged bullet (Ion)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<weaponDeteriorationChance>0.02</weaponDeteriorationChance>
+			<!-- every 50 shots -->
+			 <weaponDeteriorationHP>0~20</weaponDeteriorationHP>
+		</projectile>
+	</ThingDef>
+
+
+	<!-- walker -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>GV_AmmoSet_8x35mmChargedWalker</defName>
+		<label>8x35mm Charged (Short barrel)</label>
+		<ammoTypes>
+			<Ammo_8x35mmCharged>Bullet_6x24mmCharged</Ammo_8x35mmCharged>
+			<Ammo_8x35mmCharged_AP>Bullet_6x24mmCharged_AP</Ammo_8x35mmCharged_AP>
+			<Ammo_8x35mmCharged_Ion>Bullet_6x24mmCharged_Ion</Ammo_8x35mmCharged_Ion>
+		</ammoTypes>
+		<similarTo>AmmoSet_ChargedRifle</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+
+	<!-- pipe gun -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>GV_AmmoSet_Charged_PipeGun_Generic</defName>
+		<label>charged rifle</label>
+		<ammoTypes>
+			<Ammo_RifleCharged>Bullet_8x35mmCharged</Ammo_RifleCharged>
+			<Ammo_RifleCharged_AP>Bullet_8x35mmCharged_AP</Ammo_RifleCharged_AP>
+			<Ammo_RifleCharged_Ion>Bullet_8x35mmCharged_Ion</Ammo_RifleCharged_Ion>
+			<Ammo_HeavyCharged>Bullet_12x72mmCharged</Ammo_HeavyCharged>
+			<Ammo_HeavyCharged_AP>Bullet_12x72mmCharged_AP</Ammo_HeavyCharged_AP>
+			<Ammo_HeavyCharged_Ion>Bullet_12x72mmCharged_Ion</Ammo_HeavyCharged_Ion>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<CombatExtended.AmmoSetDef>
+		<defName>GV_AmmoSet_Charged_PipeGun</defName>
+		<label>High-caliber charged</label>
+		<ammoTypes>
+			<Ammo_8x50mmCharged>Bullet_8x50mmCharged</Ammo_8x50mmCharged>
+			<Ammo_8x50mmCharged_AP>Bullet_8x50mmCharged_AP</Ammo_8x50mmCharged_AP>
+			<Ammo_8x50mmCharged_Ion>Bullet_8x50mmCharged_Ion</Ammo_8x50mmCharged_Ion>
+			<Ammo_8x35mmCharged>Bullet_8x35mmCharged</Ammo_8x35mmCharged>
+			<Ammo_8x35mmCharged_AP>Bullet_8x35mmCharged_AP</Ammo_8x35mmCharged_AP>
+			<Ammo_8x35mmCharged_Ion>Bullet_8x35mmCharged_Ion</Ammo_8x35mmCharged_Ion>
+			<Ammo_12x72mmCharged>Bullet_12x72mmCharged</Ammo_12x72mmCharged>
+			<Ammo_12x72mmCharged_AP>Bullet_12x72mmCharged_AP</Ammo_12x72mmCharged_AP>
+			<Ammo_12x72mmCharged_Ion>Bullet_12x72mmCharged_Ion</Ammo_12x72mmCharged_Ion>
+		</ammoTypes>
+		<similarTo>GV_AmmoSet_Charged_PipeGun_Generic</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+<!-- twin heavy -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>GV_AmmoSet_ChargedHeavyTwin</defName>
+		<label>heavy charged</label>
+		<ammoTypes>
+			<Ammo_HeavyCharged>Bullet_12x72mmChargedTwin</Ammo_HeavyCharged>
+			<Ammo_HeavyCharged_AP>Bullet_12x72mmCharged_APTwin</Ammo_HeavyCharged_AP>
+			<Ammo_HeavyCharged_Ion>Bullet_12x72mmCharged_IonTwin</Ammo_HeavyCharged_Ion>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_12x72mmChargedTwin</defName>
+		<label>12x72mm Charged</label>
+		<ammoTypes>
+			<Ammo_12x72mmCharged>Bullet_12x72mmChargedTwin</Ammo_12x72mmCharged>
+			<Ammo_12x72mmCharged_AP>Bullet_12x72mmCharged_APTwin</Ammo_12x72mmCharged_AP>
+			<Ammo_12x72mmCharged_Ion>Bullet_12x72mmCharged_IonTwin</Ammo_12x72mmCharged_Ion>
+		</ammoTypes>
+		<similarTo>GV_AmmoSet_ChargedHeavyTwin</similarTo>
+	</CombatExtended.AmmoSetDef>
+	
+	<ThingDef ParentName="Base12x72mmChargedBullet">
+		<defName>Bullet_12x72mmChargedTwin</defName>
+		<label>12x72mm Charged bullet</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>39</damageAmountBase>
+			<secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>12</amount>
+				</li>
+			</secondaryDamage>
+			<armorPenetrationSharp>30</armorPenetrationSharp>
+			<armorPenetrationBlunt>324</armorPenetrationBlunt>
+			<pelletCount>2</pelletCount>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base12x72mmChargedBullet">
+		<defName>Bullet_12x72mmCharged_APTwin</defName>
+		<label>12x72mm Charged bullet (Conc.)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>31</damageAmountBase>
+			<secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+			<armorPenetrationSharp>60</armorPenetrationSharp>
+			<armorPenetrationBlunt>324</armorPenetrationBlunt>
+			<pelletCount>2</pelletCount>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base12x72mmChargedBullet">
+		<defName>Bullet_12x72mmCharged_IonTwin</defName>
+		<label>12x72mm Charged bullet (Ion)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>31</damageAmountBase>
+			<secondaryDamage>
+				<li>
+					<def>EMP</def>
+					<amount>18</amount>
+				</li>
+			</secondaryDamage>
+			<armorPenetrationSharp>45</armorPenetrationSharp>
+			<armorPenetrationBlunt>324</armorPenetrationBlunt>
+			<empShieldBreakChance>1</empShieldBreakChance>
+			<pelletCount>2</pelletCount>
+		</projectile>
+	</ThingDef>
+
+</Defs>
