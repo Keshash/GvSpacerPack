@@ -31,9 +31,8 @@
 		</statBases>
 		<costList>
 			<Steel>50</Steel>
-			<Plasteel>25</Plasteel>
-			<MeleeWeapon_MonoSword>1</MeleeWeapon_MonoSword>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<Plasteel>75</Plasteel>
+			<ComponentIndustrial>5</ComponentIndustrial>
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<equippedStatOffsets>
@@ -80,7 +79,10 @@
 			<li>RewardStandardQualitySuper</li>
 		</thingSetMakerTags>
 		<recipeMaker>
-			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<researchPrerequisites>
+				<li>ChargedShot</li>
+				<li MayRequire="CETeam.CombatExtendedMelee">CE_PoweredMelee</li>
+			</researchPrerequisites>
 			<recipeUsers Inherit="false">
 				<li>FabricationBench</li>
 			</recipeUsers>
