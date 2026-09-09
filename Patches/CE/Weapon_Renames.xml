@@ -6,7 +6,7 @@
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/ThingDef[defName="GV_ChargeAutocannon"]/label</xpath>
 			<value>
-				<label>DASH charge twin autocannon</label>
+				<label>DART charge twin autocannon</label>
 			</value>
 		</match>
 	</Operation>
@@ -116,7 +116,7 @@
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/ThingDef[defName="GV_ChargeMicrogun"]/label</xpath>
 			<value>
-				<label>SWL charge Microgun</label>
+				<label>SWL charge microgun</label>
 			</value>
 		</match>
 	</Operation>
@@ -125,7 +125,7 @@
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/ThingDef[defName="GV_ChargePipeGun"]/label</xpath>
 			<value>
-				<label>Mk1 charge Pipe Gun</label>
+				<label>Mk1 charge pipe gun</label>
 			</value>
 		</match>
 	</Operation>
@@ -134,7 +134,7 @@
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/ThingDef[defName="GV_Gun_ChargePrecisionRifle"]/label</xpath>
 			<value>
-				<label>RPC-8 charge precision Rifle</label>
+				<label>RPC-8 charge precision rifle</label>
 			</value>
 		</match>
 	</Operation>
