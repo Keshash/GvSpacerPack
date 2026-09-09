@@ -64,6 +64,7 @@
 			 <weaponDeteriorationHP>0~20</weaponDeteriorationHP>
 		</projectile>
 	</ThingDef>
+	
 
 
 	<!-- walker -->
@@ -117,6 +118,7 @@
 	<CombatExtended.AmmoSetDef>
 		<defName>GV_AmmoSet_ChargedHeavyTwin</defName>
 		<label>heavy charged</label>
+		<ammoConsumedPerShot>2</ammoConsumedPerShot>
 		<ammoTypes>
 			<Ammo_HeavyCharged>Bullet_12x72mmChargedTwin</Ammo_HeavyCharged>
 			<Ammo_HeavyCharged_AP>Bullet_12x72mmCharged_APTwin</Ammo_HeavyCharged_AP>
@@ -127,6 +129,7 @@
 	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSet_12x72mmChargedTwin</defName>
 		<label>12x72mm Charged</label>
+		<ammoConsumedPerShot>2</ammoConsumedPerShot>
 		<ammoTypes>
 			<Ammo_12x72mmCharged>Bullet_12x72mmChargedTwin</Ammo_12x72mmCharged>
 			<Ammo_12x72mmCharged_AP>Bullet_12x72mmCharged_APTwin</Ammo_12x72mmCharged_AP>
