@@ -67,9 +67,10 @@
 			<li>RewardStandardQualitySuper</li>
 		</thingSetMakerTags>
 		<recipeMaker>
-			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<researchPrerequisite>Fabrication</researchPrerequisite>
 			<recipeUsers Inherit="false">
 				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<skillRequirements>
 				<Crafting>7</Crafting>

@@ -98,7 +98,7 @@
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/ThingDef[defName="GV_ChargeFoldingCarbine"]/label</xpath>
 			<value>
-				<label>ExC-F charge folding carbine</label>
+				<label>R-3 charge folding carbine</label>
 			</value>
 		</match>
 	</Operation>

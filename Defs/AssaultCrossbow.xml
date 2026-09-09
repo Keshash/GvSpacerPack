@@ -102,17 +102,20 @@
 		</weaponClasses>
 		<generateCommonality>0.2</generateCommonality>
 		<statBases>
-			<WorkToMake>12000</WorkToMake>
-			<Mass>3.2</Mass>
-			<Bulk>6</Bulk>
-			<SwayFactor>1.0</SwayFactor>
+			<WorkToMake>38000</WorkToMake>
+			<Mass>3.5</Mass>
+			<Bulk>9</Bulk>
+			<SwayFactor>1.25</SwayFactor>
 			<ShotSpread>0.4</ShotSpread>
-			<RangedWeapon_Cooldown>0.57</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
 			<SightsEfficiency>1.10</SightsEfficiency>
 		</statBases>
 		<costList>
-			<Steel>20</Steel>
-			<WoodLog>40</WoodLog>
+			<Steel>50</Steel>
+			<Plasteel>25</Plasteel>
+			<Chemfuel>10</Chemfuel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<verbs>
 			<li Class="CombatExtended.VerbPropertiesCE">
@@ -120,7 +123,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>GV_Projectile_CrossbowBolt_Plasteel</defaultProjectile>
 				<warmupTime>1.0</warmupTime>
-				<range>45</range>
+				<range>36</range>
 				<soundCast>Shot_CE_Crossbow</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
 			</li>
