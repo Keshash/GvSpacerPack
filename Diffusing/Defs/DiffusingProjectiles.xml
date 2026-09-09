@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- handcannon -->
+
+    <ThingDef ParentName="Base8x35mmChargedBullet">
+        <defName>Bullet_8x35mmCharged_HP_Overpressure</defName>
+        <label>8x35mm Charged bullet (Diff.)</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>24</damageAmountBase>
+            <secondaryDamage>
+                <li>
+                    <def>Bomb_Secondary</def>
+                    <amount>7</amount>
+                </li>
+                <li>
+                    <def>Bomb_Secondary</def>
+                    <amount>7</amount>
+                </li>
+            </secondaryDamage>
+            <armorPenetrationSharp>8</armorPenetrationSharp>
+            <armorPenetrationBlunt>57.6</armorPenetrationBlunt>
+			<weaponDeteriorationChance>0.02</weaponDeteriorationChance>
+			<!-- every 50 shots -->
+			 <weaponDeteriorationHP>0~20</weaponDeteriorationHP>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="Base12x72mmChargedBullet">
+        <defName>Bullet_12x72mmCharged_HPTwin</defName>
+        <label>12x72mm Charged bullet (Diff.)</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>50</damageAmountBase>
+            <secondaryDamage>
+                <li>
+                    <def>Bomb_Secondary</def>
+                    <amount>15</amount>
+                </li>
+                <li>
+                    <def>Bomb_Secondary</def>
+                    <amount>15</amount>
+                </li>
+            </secondaryDamage>
+            <armorPenetrationSharp>15</armorPenetrationSharp>
+            <armorPenetrationBlunt>324</armorPenetrationBlunt>
+			<pelletCount>2</pelletCount>
+        </projectile>
+    </ThingDef>
+
+</Defs>

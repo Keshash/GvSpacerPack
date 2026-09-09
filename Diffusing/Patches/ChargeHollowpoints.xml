@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/CombatExtended.AmmoSetDef[defName="GV_AmmoSet_ChargedHeavySB"]/ammoTypes</xpath>
+        <value>
+            <Ammo_HeavyCharged_HP>Bullet_8x35mmCharged_HP_Overpressure</Ammo_HeavyCharged_HP>
+        </value>
+    </Operation>
+
+	<Operation Class="PatchOperationAdd">
+        <xpath>Defs/CombatExtended.AmmoSetDef[defName="GV_AmmoSet_12x72mmChargedSB"]/ammoTypes</xpath>
+        <value>
+            <Ammo_12x72mmCharged_HP>Bullet_8x35mmCharged_HP_Overpressure</Ammo_12x72mmCharged_HP>
+        </value>
+    </Operation>
+
+	<Operation Class="PatchOperationAdd">
+        <xpath>Defs/CombatExtended.AmmoSetDef[defName="GV_AmmoSet_8x35mmChargedWalker"]/ammoTypes</xpath>
+        <value>
+            <Ammo_8x35mmCharged_HP>Bullet_6x24mmCharged_HP</Ammo_8x35mmCharged_HP>
+        </value>
+    </Operation>
+
+	
+	<Operation Class="PatchOperationAdd">
+        <xpath>Defs/CombatExtended.AmmoSetDef[defName="GV_AmmoSet_Charged_PipeGun_Generic"]/ammoTypes</xpath>
+        <value>
+            <Ammo_RifleCharged_HP>Bullet_8x35mmCharged_HP</Ammo_RifleCharged_HP>
+			<Ammo_HeavyCharged_HP>Bullet_12x72mmCharged_HP</Ammo_HeavyCharged_HP>
+        </value>
+    </Operation>
+
+	
+	<Operation Class="PatchOperationAdd">
+        <xpath>Defs/CombatExtended.AmmoSetDef[defName="GV_AmmoSet_Charged_PipeGun"]/ammoTypes</xpath>
+        <value>
+			<Ammo_8x50mmCharged_HP>Bullet_8x50mmCharged_HP</Ammo_8x50mmCharged_HP>
+			<Ammo_8x35mmCharged_HP>Bullet_8x35mmCharged_HP</Ammo_8x35mmCharged_HP>
+			<Ammo_12x72mmCharged_HP>Bullet_12x72mmCharged_HP</Ammo_12x72mmCharged_HP>
+        </value>
+    </Operation>
+
+	<Operation Class="PatchOperationAdd">
+        <xpath>Defs/CombatExtended.AmmoSetDef[defName="GV_AmmoSet_ChargedHeavyTwin"]/ammoTypes</xpath>
+        <value>
+            <Ammo_HeavyCharged_HP>Bullet_12x72mmCharged_HPTwin</Ammo_HeavyCharged_HP>
+        </value>
+    </Operation>
+
+	<Operation Class="PatchOperationAdd">
+        <xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_12x72mmChargedTwin"]/ammoTypes</xpath>
+        <value>
+			<Ammo_12x72mmCharged_HP>Bullet_12x72mmCharged_HPTwin</Ammo_12x72mmCharged_HP>
+        </value>
+    </Operation>
+
+
+
+</Patch>
