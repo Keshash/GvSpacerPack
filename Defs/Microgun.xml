@@ -19,11 +19,11 @@
 		<statBases>
 			<WorkToMake>56000</WorkToMake>
 			<SightsEfficiency>1.1</SightsEfficiency>
-			<ShotSpread>0.12</ShotSpread>
-			<SwayFactor>0.75</SwayFactor>
-			<Bulk>5.00</Bulk>
-			<Mass>2.50</Mass>
-			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+			<ShotSpread>0.13</ShotSpread>
+			<SwayFactor>1.24</SwayFactor>
+			<Bulk>5.50</Bulk>
+			<Mass>5.25</Mass>
+			<RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
 		</statBases>
 		<costList>
 			<Steel>50</Steel>
@@ -34,12 +34,12 @@
 		</costList>
 		<verbs>
 				<li Class="CombatExtended.VerbPropertiesCE">
-				<recoilAmount>0.97</recoilAmount>
+				<recoilAmount>1.03</recoilAmount>
 				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_6x18mmCharged</defaultProjectile>
-				<warmupTime>1.1</warmupTime>
-				<range>62</range>
+				<warmupTime>1.8</warmupTime>
+				<range>55</range>
 				<burstShotCount>10</burstShotCount>
 				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
 				<soundCast>Shot_ChargeBlaster</soundCast>
@@ -86,11 +86,11 @@
 					<ammoSet>AmmoSet_6x18mmCharged</ammoSet>
 				</propsUnderBarrel>
 				<verbPropsUnderBarrel>
-					<recoilAmount>0.77</recoilAmount>
+					<recoilAmount>1.03</recoilAmount>
 					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 					<hasStandardCommand>true</hasStandardCommand>
 					<defaultProjectile>Bullet_6x18mmCharged</defaultProjectile>
-					<warmupTime>2.1</warmupTime>
+					<warmupTime>2.3</warmupTime>
 					<range>62</range>
 					<burstShotCount>150</burstShotCount>
 					<ticksBetweenBurstShots>2</ticksBetweenBurstShots>

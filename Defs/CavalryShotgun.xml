@@ -79,7 +79,7 @@
 			<li>RewardStandardQualitySuper</li>
 		</thingSetMakerTags>
 		<recipeMaker>
-			<researchPrerequisites>
+			<researchPrerequisites Inherit="false">
 				<li>ChargedShot</li>
 				<li MayRequire="CETeam.CombatExtendedMelee">CE_PoweredMelee</li>
 			</researchPrerequisites>

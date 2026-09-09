@@ -20,7 +20,7 @@
 			<WorkToMake>33500</WorkToMake>
 			<Mass>3.0</Mass>
 			<Bulk>8.50</Bulk>
-			<ShotSpread>0.3</ShotSpread>
+			<ShotSpread>0.07</ShotSpread>
 			<SwayFactor>1.33</SwayFactor>
 			<!-- 2x scope -->
 			<SightsEfficiency>2.18</SightsEfficiency>
@@ -40,7 +40,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_12GaugeCharged</defaultProjectile>
 				<warmupTime>1.1</warmupTime>
-				<range>55</range>
+				<range>42</range>
 				<soundCast>Shot_GV_SuppressedChargeHeavy</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>0</muzzleFlashScale>
